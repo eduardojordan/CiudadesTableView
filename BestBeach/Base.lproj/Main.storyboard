@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HnN-Wt-jNy">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Beach Table View Controller-->
+        <scene sceneID="9RE-Wm-4f8">
+            <objects>
+                <tableViewController id="HnN-Wt-jNy" customClass="BeachTableViewController" customModule="BestBeach" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="260" sectionHeaderHeight="28" sectionFooterHeight="28" id="Hso-H8-tQK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" rowHeight="265" id="1Dq-cP-zET" customClass="BeachTableViewCell" customModule="BestBeach" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="265"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1Dq-cP-zET" id="ILF-uA-gCR">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="264.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="rfa-lO-6Fe">
+                                            <rect key="frame" x="-1" y="0.0" width="326" height="236"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </stackView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="326" verticalHuggingPriority="275" insetsLayoutMarginsFromSafeArea="NO" image="Bahamas.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Cts-vF-eXN">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="270"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="270" id="woo-KZ-OEj"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre de Playa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cyt-zl-zyo">
+                                            <rect key="frame" x="69.5" y="115" width="236" height="36"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Cts-vF-eXN" firstAttribute="top" secondItem="ILF-uA-gCR" secondAttribute="top" id="4Ik-0O-9zg"/>
+                                        <constraint firstItem="cyt-zl-zyo" firstAttribute="centerY" secondItem="ILF-uA-gCR" secondAttribute="centerY" id="Gmn-fL-LyI"/>
+                                        <constraint firstAttribute="bottom" secondItem="Cts-vF-eXN" secondAttribute="bottom" id="IL9-VD-POX"/>
+                                        <constraint firstAttribute="trailing" secondItem="Cts-vF-eXN" secondAttribute="trailing" id="Kg5-9X-j7h"/>
+                                        <constraint firstItem="cyt-zl-zyo" firstAttribute="centerX" secondItem="ILF-uA-gCR" secondAttribute="centerX" id="WOM-4A-IBg"/>
+                                        <constraint firstItem="Cts-vF-eXN" firstAttribute="leading" secondItem="ILF-uA-gCR" secondAttribute="leading" id="one-se-qtP"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <viewLayoutGuide key="safeArea" id="2FR-vN-fzf"/>
+                                <connections>
+                                    <outlet property="beachNameLabel" destination="cyt-zl-zyo" id="uPU-mw-lVP"/>
+                                    <outlet property="bkImageView" destination="Cts-vF-eXN" id="LZ6-2F-Fov"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="HnN-Wt-jNy" id="07y-za-m3t"/>
+                            <outlet property="delegate" destination="HnN-Wt-jNy" id="Amm-4f-3eh"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8RX-c7-eVj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="103.2" y="109.29535232383809"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Bahamas.jpg" width="326" height="236"/>
+    </resources>
+</document>
